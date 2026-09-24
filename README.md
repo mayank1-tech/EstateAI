@@ -299,9 +299,7 @@ streamlit run dashboard/dashboard.py
 
 # 👨‍💻 Author
 
-**Krishnaveni T N**
-
-UI/UX developer | Full stack developer
+**Mayank Jain**
 
 ---
 
