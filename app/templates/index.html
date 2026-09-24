@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstateAI — AI-Powered House Price Prediction & Real Estate Analytics</title>
+    <meta name="description" content="Predict property values with high precision using EstateAI's machine learning model trained on comprehensive residential housing market data.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- Ambient Luxury Background Glows -->
+    <div class="ambient-glow glow-top"></div>
+    <div class="ambient-glow glow-center"></div>
+    <div class="ambient-glow glow-bottom"></div>
+
+    <!-- ==========================================================================
+         1. Premium Navigation Bar
+         ========================================================================== -->
+    <header class="navbar-wrapper">
+        <nav class="navbar" id="mainNavbar">
+            <a href="#hero" class="brand-logo" aria-label="EstateAI Home">
+                <span class="brand-icon">🏠</span>
+                <span class="brand-name">Estate<span class="gold-accent">AI</span></span>
+            </a>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#prediction" class="nav-link">Prediction</a>
+            </div>
+
+            <div class="nav-actions">
+                <a href="#prediction" class="btn-nav-cta">
+                    <span class="nav-cta-text">
+                        <span class="nav-cta-full">Get Prediction</span>
+                        <span class="nav-cta-compact">Predict</span>
+                    </span>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <!-- ==========================================================================
+             2. Hero Section
+             ========================================================================== -->
+        <section class="hero-section" id="hero">
+            <div class="hero-container">
+                <div class="hero-badge">
+                    <span class="pulse-indicator"></span>
+                    <span>State-of-the-Art Machine Learning Valuation</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Predict Your Property's Value with <span class="gold-text">AI</span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    Advanced machine learning analyzes your property details to provide an intelligent estimated house price.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#prediction" class="btn-primary hero-btn">
+                        <span>🔮 Predict Your House Price</span>
+                    </a>
+                    <a href="#how-it-works" class="btn-secondary hero-btn">
+                        <span>Learn How It Works</span>
+                    </a>
+                </div>
+
+                <!-- Hero AI Decorative Highlights -->
+                <div class="hero-stats-banner">
+                    <div class="stat-pill">
+                        <span class="stat-icon">📊</span>
+                        <div class="stat-info">
+                            <span class="stat-value">88.06%</span>
+                            <span class="stat-desc">R² Accuracy Score</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-pill">
+                        <span class="stat-icon">⚡</span>
+                        <div class="stat-info">
+                            <span class="stat-value">Real-Time</span>
+                            <span class="stat-desc">Instant Valuation</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-pill">
+                        <span class="stat-icon">🧠</span>
+                        <div class="stat-info">
+                            <span class="stat-value">7 Features</span>
+                            <span class="stat-desc">Deep Architectural Metrics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             3. How It Works Section
+             ========================================================================== -->
+        <section class="how-it-works-section" id="how-it-works">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Intelligent Workflow</span>
+                    <h2 class="section-title">How It Works</h2>
+                    <p class="section-subtitle">A seamless three-step pipeline turning property metrics into precise market valuations.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-number">01</span>
+                            <div class="step-icon-wrap">
+                                <span>📋</span>
+                            </div>
+                        </div>
+                        <h3 class="step-title">Enter Property Details</h3>
+                        <p class="step-desc">
+                            Provide important information about the property such as square footage, room count, year built, and overall build quality.
+                        </p>
+                        <div class="step-connector"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-number">02</span>
+                            <div class="step-icon-wrap">
+                                <span>🤖</span>
+                            </div>
+                        </div>
+                        <h3 class="step-title">AI Analyzes Your Data</h3>
+                        <p class="step-desc">
+                            The ensemble of Gradient Boosting, Random Forest, and Ridge machine learning models analyzes the property features against trained residential market weights and trends.
+                        </p>
+                        <div class="step-connector"></div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-header">
+                            <span class="step-number">03</span>
+                            <div class="step-icon-wrap">
+                                <span>🎯</span>
+                            </div>
+                        </div>
+                        <h3 class="step-title">Get Your Prediction</h3>
+                        <p class="step-desc">
+                            Receive an estimated property price instantly with calculated price per square foot, mortgage breakdown, and quality tier.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             4. Prediction Form & Results Section
+             ========================================================================== -->
+        <section class="prediction-section" id="prediction">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Instant AI Valuation</span>
+                    <h2 class="section-title">Property Details</h2>
+                    <p class="section-subtitle">Enter your property information and let our AI estimate its value.</p>
+                </div>
+
+                <!-- Main Glass Prediction Card -->
+                <div class="prediction-card">
+                    <!-- Preset Selector Bar -->
+                    <div class="preset-bar">
+                        <span class="preset-title">
+                            <span class="preset-spark">⚡</span> Quick Property Presets:
+                        </span>
+                        <div class="preset-btn-group">
+                            <button type="button" class="preset-pill" data-preset="starter" onclick="applyPreset('starter')">
+                                🏡 Starter Home
+                            </button>
+                            <button type="button" class="preset-pill active" data-preset="family" onclick="applyPreset('family')">
+                                🏠 Suburban Family
+                            </button>
+                            <button type="button" class="preset-pill" data-preset="luxury" onclick="applyPreset('luxury')">
+                                🏰 Luxury Villa
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- The Prediction Form (action="/predict", method="POST") -->
+                    <form id="predictionForm" action="/predict" method="POST">
+                        <div class="form-grid">
+                            
+                            <!-- Overall Quality (1-10) -->
+                            <div class="form-field-card span-full">
+                                <div class="field-head">
+                                    <div class="field-title-group">
+                                        <span class="field-icon">⭐</span>
+                                        <div>
+                                            <label for="OverallQual" class="field-label">Overall Quality (1–10)</label>
+                                            <p class="field-description">Rate the overall construction and finishing quality.</p>
+                                        </div>
+                                    </div>
+                                    <div class="quality-badge" id="qualityBadge">7 — Above Average</div>
+                                </div>
+                                <div class="slider-wrapper">
+                                    <input 
+                                        type="range" 
+                                        id="OverallQualSlider" 
+                                        min="1" 
+                                        max="10" 
+                                        step="1" 
+                                        value="{{ inputs.get('OverallQual', '7') if inputs else '7' }}"
+                                        oninput="syncQuality(this.value)"
+                                    >
+                                    <input 
+                                        type="hidden" 
+                                        id="OverallQual" 
+                                        name="OverallQual" 
+                                        value="{{ inputs.get('OverallQual', '7') if inputs else '7' }}"
+                                    >
+                                    <div class="slider-markers">
+                                        <span>1 (Very Poor)</span>
+                                        <span>3 (Fair)</span>
+                                        <span>5 (Average)</span>
+                                        <span>7 (Good)</span>
+                                        <span>9 (Luxury)</span>
+                                        <span>10 (Very Excellent)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Living Area (sq.ft) -->
+                            <div class="form-field-card">
+                                <div class="field-title-group">
+                                    <span class="field-icon">📐</span>
+                                    <div>
+                                        <label for="GrLivArea" class="field-label">Living Area (sq.ft)</label>
+                                        <p class="field-description">Total usable living space above ground level.</p>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <input 
+                                        type="number" 
+                                        id="GrLivArea" 
+                                        name="GrLivArea" 
+                                        min="300" 
+                                        max="15000" 
+                                        step="10"
+                                        placeholder="e.g. 1750" 
+                                        value="{{ inputs.get('GrLivArea', '1750') if inputs else '1750' }}" 
+                                        required
+                                    >
+                                    <span class="input-suffix">sq.ft</span>
+                                </div>
+                            </div>
+
+                            <!-- Basement Area (sq.ft) -->
+                            <div class="form-field-card">
+                                <div class="field-title-group">
+                                    <span class="field-icon">🏛️</span>
+                                    <div>
+                                        <label for="TotalBsmtSF" class="field-label">Basement Area (sq.ft)</label>
+                                        <p class="field-description">Total area of the basement below ground level.</p>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <input 
+                                        type="number" 
+                                        id="TotalBsmtSF" 
+                                        name="TotalBsmtSF" 
+                                        min="0" 
+                                        max="10000" 
+                                        step="10"
+                                        placeholder="e.g. 850" 
+                                        value="{{ inputs.get('TotalBsmtSF', '850') if inputs else '850' }}" 
+                                        required
+                                    >
+                                    <span class="input-suffix">sq.ft</span>
+                                </div>
+                            </div>
+
+                            <!-- Full Bathrooms -->
+                            <div class="form-field-card">
+                                <div class="field-title-group">
+                                    <span class="field-icon">🚿</span>
+                                    <div>
+                                        <label for="FullBath" class="field-label">Full Bathrooms</label>
+                                        <p class="field-description">Number of complete bathrooms.</p>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <input 
+                                        type="number" 
+                                        id="FullBath" 
+                                        name="FullBath" 
+                                        min="0" 
+                                        max="10" 
+                                        step="1"
+                                        placeholder="e.g. 2" 
+                                        value="{{ inputs.get('FullBath', '2') if inputs else '2' }}" 
+                                        required
+                                    >
+                                    <span class="input-suffix">baths</span>
+                                </div>
+                            </div>
+
+                            <!-- Bedrooms -->
+                            <div class="form-field-card">
+                                <div class="field-title-group">
+                                    <span class="field-icon">🛏️</span>
+                                    <div>
+                                        <label for="BedroomAbvGr" class="field-label">Bedrooms</label>
+                                        <p class="field-description">Number of bedrooms above ground level.</p>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <input 
+                                        type="number" 
+                                        id="BedroomAbvGr" 
+                                        name="BedroomAbvGr" 
+                                        min="0" 
+                                        max="15" 
+                                        step="1"
+                                        placeholder="e.g. 3" 
+                                        value="{{ inputs.get('BedroomAbvGr', '3') if inputs else '3' }}" 
+                                        required
+                                    >
+                                    <span class="input-suffix">rooms</span>
+                                </div>
+                            </div>
+
+                            <!-- Year Built -->
+                            <div class="form-field-card">
+                                <div class="field-title-group">
+                                    <span class="field-icon">📅</span>
+                                    <div>
+                                        <label for="YearBuilt" class="field-label">Year Built</label>
+                                        <p class="field-description">The year the property was constructed.</p>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <input 
+                                        type="number" 
+                                        id="YearBuilt" 
+                                        name="YearBuilt" 
+                                        min="1800" 
+                                        max="2030" 
+                                        step="1"
+                                        placeholder="e.g. 2008" 
+                                        value="{{ inputs.get('YearBuilt', '2008') if inputs else '2008' }}" 
+                                        required
+                                    >
+                                    <span class="input-suffix">year</span>
+                                </div>
+                            </div>
+
+                            <!-- Garage Capacity -->
+                            <div class="form-field-card">
+                                <div class="field-title-group">
+                                    <span class="field-icon">🚗</span>
+                                    <div>
+                                        <label for="GarageCars" class="field-label">Garage Capacity</label>
+                                        <p class="field-description">Number of cars the garage can accommodate.</p>
+                                    </div>
+                                </div>
+                                <div class="input-container">
+                                    <input 
+                                        type="number" 
+                                        id="GarageCars" 
+                                        name="GarageCars" 
+                                        min="0" 
+                                        max="10" 
+                                        step="1"
+                                        placeholder="e.g. 2" 
+                                        value="{{ inputs.get('GarageCars', '2') if inputs else '2' }}" 
+                                        required
+                                    >
+                                    <span class="input-suffix">cars</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Form Action Controls -->
+                        <div class="form-actions">
+                            <button type="submit" id="submitBtn" class="btn-primary submit-btn">
+                                <span class="spinner" id="btnSpinner"></span>
+                                <span id="btnText">✨ Predict House Price</span>
+                            </button>
+                            <button type="button" class="btn-reset" onclick="resetDefaults()">
+                                <span>🔄 Reset to Default</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Error Alert Card (Jinja SSR & AJAX compatible) -->
+                    <div id="errorBox" class="alert-card error {% if not error %}hidden{% endif %}">
+                        <div class="alert-icon-wrap">⚠️</div>
+                        <div class="alert-body">
+                            <h4 class="alert-title">Valuation Notice</h4>
+                            <p id="errorMessage" class="alert-msg">{{ error if error else '' }}</p>
+                        </div>
+                    </div>
+
+                    <!-- ==========================================================================
+                         4. Prediction Result Card (Jinja SSR & AJAX compatible)
+                         ========================================================================== -->
+                    <div id="resultCard" class="result-card {% if not prediction %}hidden{% endif %}">
+                        <div class="result-header">
+                            <div class="result-heading-wrap">
+                                <h3 class="result-title">🎯 AI Estimated Property Value</h3>
+                                <p class="result-subtitle">Intelligent market estimation based on algorithmic property assessment</p>
+                            </div>
+                            <span class="quality-tier-pill {{ metrics.badge_class if metrics else 'badge-high' }}" id="resultBadge">
+                                {{ metrics.quality_tier if metrics else 'High Quality / Modern' }}
+                            </span>
+                        </div>
+
+                        <!-- Hero Price Display -->
+                        <div class="price-display-box">
+                            <span class="currency-label">Estimated Valuation</span>
+                            <div class="price-amount" id="displayPrice">{{ prediction if prediction else '$0' }}</div>
+                            <span class="price-timestamp">Based on ensemble regression analysis</span>
+                        </div>
+
+                        <!-- Model Metadata Tags -->
+                        <div class="meta-badges-row">
+                            <div class="meta-badge">
+                                <span class="meta-icon">🤖</span>
+                                <span class="meta-text">AI Model: <strong>GB + HGB + RF + Ridge Ensemble</strong></span>
+                            </div>
+                            <div class="meta-badge">
+                                <span class="meta-icon">📊</span>
+                                <span class="meta-text">Model Accuracy: <strong>R² Score 0.8806 (5-fold CV)</strong></span>
+                            </div>
+                            <div class="meta-badge">
+                                <span class="meta-icon">🧠</span>
+                                <span class="meta-text">Features Analyzed: <strong>7 Property Features</strong></span>
+                            </div>
+                        </div>
+
+                        <!-- Supplementary Real-Estate Analytics -->
+                        <div class="analytics-metrics-grid">
+                            <div class="analytics-item">
+                                <span class="analytics-icon">💵</span>
+                                <span class="analytics-label">Price / Sq. Ft</span>
+                                <span class="analytics-value" id="metricSqft">{{ metrics.price_per_sqft if metrics else '--' }}</span>
+                            </div>
+                            <div class="analytics-item">
+                                <span class="analytics-icon">🏦</span>
+                                <span class="analytics-label">Est. Monthly Mortgage</span>
+                                <span class="analytics-value" id="metricMortgage">{{ metrics.monthly_mortgage if metrics else '--' }}</span>
+                                <span class="analytics-caption">30-yr fixed @ 6.5%, 20% down</span>
+                            </div>
+                            <div class="analytics-item">
+                                <span class="analytics-icon">🏷️</span>
+                                <span class="analytics-label">Quality Classification</span>
+                                <span class="analytics-value" id="metricTier">{{ metrics.quality_tier if metrics else '--' }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ==========================================================================
+             8. Footer
+             ========================================================================== -->
+        <footer class="footer-wrapper">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <div class="brand-logo">
+                            <span class="brand-icon">🏠</span>
+                            <span class="brand-name">Estate<span class="gold-accent">AI</span></span>
+                        </div>
+                        <p class="footer-tagline">AI-powered intelligence for smarter real estate decisions.</p>
+                    </div>
+
+                    <div class="footer-nav">
+                        <span class="footer-col-title">Navigation</span>
+                        <a href="#hero">Home</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#prediction">Prediction</a>
+                    </div>
+
+                    <div class="footer-nav">
+                        <span class="footer-col-title">System</span>
+                        <a href="#prediction">Instant Valuation</a>
+                        <a href="#hero" class="back-to-top">↑ Back to Top</a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p class="copyright">© 2026 EstateAI — AI-Powered House Price Prediction System</p>
+                    <p class="legal-note">Designed for high-accuracy residential real estate intelligence.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Client-Side UX Enhancements: Presets, Quality Slider, AJAX Predict -->
+    <script>
+        // Descriptions matching quality ratings 1 to 10
+        const qualityDescriptions = {
+            1: "1 — Very Poor",
+            2: "2 — Poor",
+            3: "3 — Fair",
+            4: "4 — Below Average",
+            5: "5 — Average",
+            6: "6 — Good",
+            7: "7 — Above Average",
+            8: "8 — Very Good",
+            9: "9 — Luxury / Custom",
+            10: "10 — Very Excellent / Luxury"
+        };
+
+        // Standard presets
+        const presets = {
+            starter: {
+                OverallQual: 5,
+                GrLivArea: 1150,
+                FullBath: 1,
+                BedroomAbvGr: 2,
+                YearBuilt: 1980,
+                GarageCars: 1,
+                TotalBsmtSF: 600
+            },
+            family: {
+                OverallQual: 7,
+                GrLivArea: 1850,
+                FullBath: 2,
+                BedroomAbvGr: 3,
+                YearBuilt: 2006,
+                GarageCars: 2,
+                TotalBsmtSF: 950
+            },
+            luxury: {
+                OverallQual: 9,
+                GrLivArea: 3400,
+                FullBath: 3,
+                BedroomAbvGr: 4,
+                YearBuilt: 2020,
+                GarageCars: 3,
+                TotalBsmtSF: 1650
+            }
+        };
+
+        function syncQuality(val) {
+            val = parseInt(val, 10);
+            const hiddenInput = document.getElementById('OverallQual');
+            const slider = document.getElementById('OverallQualSlider');
+            const badge = document.getElementById('qualityBadge');
+
+            if (hiddenInput) hiddenInput.value = val;
+            if (slider) {
+                slider.value = val;
+                const pct = ((val - 1) / (10 - 1)) * 100;
+                slider.style.background = `linear-gradient(to right, #D4AF37 0%, #F4D03F ${pct}%, #242424 ${pct}%, #242424 100%)`;
+            }
+            if (badge && qualityDescriptions[val]) {
+                badge.textContent = qualityDescriptions[val];
+            }
+        }
+
+        function applyPreset(name) {
+            const p = presets[name];
+            if (!p) return;
+
+            document.querySelectorAll('.preset-pill').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.preset === name);
+            });
+
+            document.getElementById('GrLivArea').value = p.GrLivArea;
+            document.getElementById('TotalBsmtSF').value = p.TotalBsmtSF;
+            document.getElementById('BedroomAbvGr').value = p.BedroomAbvGr;
+            document.getElementById('FullBath').value = p.FullBath;
+            document.getElementById('YearBuilt').value = p.YearBuilt;
+            document.getElementById('GarageCars').value = p.GarageCars;
+            syncQuality(p.OverallQual);
+
+            // Trigger prediction
+            submitAjaxPrediction();
+        }
+
+        function resetDefaults() {
+            applyPreset('family');
+        }
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+        if (mobileToggle && navMenu) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+                mobileToggle.classList.toggle('open');
+            });
+
+            // Close on link click
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('open');
+                    mobileToggle.classList.remove('open');
+                });
+            });
+        }
+
+        // Navbar Scroll Blur Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('mainNavbar');
+            if (nav) {
+                if (window.scrollY > 30) {
+                    nav.classList.add('scrolled');
+                } else {
+                    nav.classList.remove('scrolled');
+                }
+            }
+        });
+
+        // Initialize Slider Visuals
+        window.addEventListener('DOMContentLoaded', () => {
+            const initialQual = document.getElementById('OverallQual').value || 7;
+            syncQuality(initialQual);
+
+            // If a prediction already exists on page load (from SSR), scroll smoothly to result
+            const resultCard = document.getElementById('resultCard');
+            if (resultCard && !resultCard.classList.contains('hidden')) {
+                resultCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+
+        // Intercept Form Submission for Fast AJAX Prediction, Falling Back Gracefully
+        const form = document.getElementById('predictionForm');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                submitAjaxPrediction();
+            });
+        }
+
+        async function submitAjaxPrediction() {
+            const btn = document.getElementById('submitBtn');
+            const spinner = document.getElementById('btnSpinner');
+            const btnText = document.getElementById('btnText');
+            const errorBox = document.getElementById('errorBox');
+            const errorMessage = document.getElementById('errorMessage');
+            const resultCard = document.getElementById('resultCard');
+
+            btn.disabled = true;
+            if (spinner) spinner.style.display = 'inline-block';
+            if (btnText) btnText.textContent = 'Analyzing Property...';
+
+            const payload = {
+                OverallQual: document.getElementById('OverallQual').value,
+                GrLivArea: document.getElementById('GrLivArea').value,
+                FullBath: document.getElementById('FullBath').value,
+                BedroomAbvGr: document.getElementById('BedroomAbvGr').value,
+                YearBuilt: document.getElementById('YearBuilt').value,
+                GarageCars: document.getElementById('GarageCars').value,
+                TotalBsmtSF: document.getElementById('TotalBsmtSF').value
+            };
+
+            try {
+                const response = await fetch('/api/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+
+                if (!response.ok || !data.success) {
+                    throw new Error(data.error || 'Prediction calculation failed');
+                }
+
+                // Hide error banner
+                if (errorBox) errorBox.classList.add('hidden');
+
+                // Update UI elements
+                const metrics = data.metrics;
+                document.getElementById('displayPrice').textContent = metrics.formatted_price;
+                document.getElementById('metricSqft').textContent = metrics.price_per_sqft;
+                document.getElementById('metricMortgage').textContent = metrics.monthly_mortgage;
+                document.getElementById('metricTier').textContent = metrics.quality_tier;
+
+                const badge = document.getElementById('resultBadge');
+                if (badge) {
+                    badge.className = `quality-tier-pill ${metrics.badge_class}`;
+                    badge.textContent = metrics.quality_tier;
+                }
+
+                if (resultCard) {
+                    resultCard.classList.remove('hidden');
+                    resultCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }
+
+            } catch (err) {
+                if (errorMessage) errorMessage.textContent = err.message || 'An unexpected error occurred.';
+                if (errorBox) errorBox.classList.remove('hidden');
+            } finally {
+                btn.disabled = false;
+                if (spinner) spinner.style.display = 'none';
+                if (btnText) btnText.textContent = '✨ Predict House Price';
+            }
+        }
+    </script>
+</body>
+</html>
